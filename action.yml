@@ -34,8 +34,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: denoland/setup-deno@v1
+    - uses: denoland/setup-deno@v2
       with:
         deno-version: 2.2.6
-    - run: deno task run
+    - run: deno run --frozen --allow-read --allow-env --allow-net ./src/main.ts
       shell: bash
